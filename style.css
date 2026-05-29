@@ -1,0 +1,121 @@
+:root {
+    --bg-color: #1a1a1a;
+    --card-bg: #2d2d2d;
+    --text-color: #eeeeee;
+    --accent-color: #61afef;
+    --delete-color: #e06c75;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--accent-color);
+}
+
+.write-section {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+input, textarea {
+    background: #3e3e3e;
+    border: 1px solid #4e4e4e;
+    padding: 12px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--accent-color);
+}
+
+button {
+    background: var(--accent-color);
+    color: #1a1a1a;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.post-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.post-card h3 {
+    margin: 0 0 10px 0;
+    color: var(--accent-color);
+}
+
+.post-card p {
+    margin: 0 0 15px 0;
+    line-height: 1.6;
+    white-space: pre-wrap; /* 줄바꿈 유지 */
+}
+
+.post-date {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    color: var(--delete-color);
+    border: 1px solid var(--delete-color);
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+}
+
+.delete-btn:hover {
+    background: var(--delete-color);
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
